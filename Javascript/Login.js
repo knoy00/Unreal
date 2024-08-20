@@ -1,3 +1,5 @@
+import {auth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from './Firebase.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     //----------------------------------------------------Login Page
     const login_header = document.getElementById("login_header");
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             forgot_pass.style.marginTop = "-12%";
             forgot.style.overflow = "hidden";
             forgot.style.height = "100px";
-            login_right.style.backgroundColor = "#000000"
+            login_right.style.backgroundColor = "#0d1117"
             
         }
         else{
@@ -48,4 +50,132 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-});
+
+        //----------------------------Authentication-----------------------------------//
+
+
+    const passwordField = document.getElementById("password");
+    const confirmPasswordField = document.getElementById("confirmPassword");
+    const successMsg = document.getElementById("success_msg");
+
+
+    function validatePasswords() {
+        const password = passwordField.value;
+        const confirmPassword = confirmPasswordField.value;
+
+        if (password === confirmPassword && password !== "") {
+            passwordField.style.borderBottomColor = "green";
+            passwordField.style.borderBottomWidth = "4px";
+            confirmPasswordField.style.borderBottomColor = "green";
+            confirmPasswordField.style.borderBottomWidth = "4px";
+        } else {
+            passwordField.style.borderBottomColor = "red";
+            passwordField.style.borderBottomWidth = "4px";
+            confirmPasswordField.style.borderBottomColor = "red";
+            confirmPasswordField.style.borderBottomWidth = "4px";
+        };
+    };
+
+    confirmPasswordField.addEventListener("input", validatePasswords);
+    passwordField.addEventListener("input", validatePasswords);
+
+    login_btn.addEventListener("click", (event) => {
+        const email = document.getElementById("email").value;
+        const password = passwordField.value;
+        const confirmPassword = confirmPasswordField.value;
+        
+        successMsg.textContent = "";
+        successMsg.style.backgroundColor = "";
+        confirmPasswordField.style.borderBottomColor = "";
+        passwordField.style.borderBottomColor = "";
+
+        if (!isLoginPage) {
+            if (email && password && confirmPassword) {
+                if (password === confirmPassword) {
+                    createUserWithEmailAndPassword(auth, email, password)
+                        .then((userCredential) => {
+                            successMsg.textContent = "Registration successful!";
+                            successMsg.style.backgroundColor = "#72ed72";
+                            successMsg.style.marginTop = "25px";
+
+                            setTimeout(() => {
+                                successMsg.style.marginTop = "-100px";
+                            }, 3000);
+                        })
+                        .catch((error) => {
+                            successMsg.textContent = error.message;
+                            successMsg.style.backgroundColor = "#ed7272";
+                            successMsg.style.marginTop = "25px";
+
+                            setTimeout(() => {
+                                successMsg.style.marginTop = "-100px";
+                            }, 3000);
+
+                            passwordField.value = "";
+                            confirmPasswordField.value = "";
+                        });
+                } else {
+                    validatePasswords();
+                    successMsg.textContent = "Passwords do not match";
+                    successMsg.style.backgroundColor = "#ed7272";
+                    successMsg.style.marginTop = "25px";
+
+                    setTimeout(() => {
+                        successMsg.style.marginTop = "-100px";
+                    }, 3000);
+
+                    passwordField.value = "";
+                    confirmPasswordField.value = "";
+                }
+            } else {
+                successMsg.textContent = "Please fill all fields";
+                successMsg.style.backgroundColor = "#ed7272";
+                successMsg.style.marginTop = "25px";
+
+                setTimeout(() => {
+                    successMsg.style.marginTop = "-100px";
+                }, 3000);
+
+                passwordField.value = "";
+                confirmPasswordField.value = "";
+            }
+        } else {
+            if(email && password){
+                signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    successMsg.style.marginTop = "25px";
+                    successMsg.textContent = "Login successful!";
+                    successMsg.style.backgroundColor = "#32ff2f89"
+
+                    setTimeout(() => {
+                        successMsg.style.marginTop = "-100px";
+                    }, 3000);
+                })
+                .catch((error) => {
+                    successMsg.textContent = "Invalid Credentials";
+                    successMsg.style.backgroundColor = "#ed7272";
+                    successMsg.style.marginTop = "25px";
+
+                    setTimeout(() => {
+                        successMsg.style.marginTop = "-100px";
+                    }, 3000);
+
+                    passwordField.value = "";
+                });
+            }
+            else{
+                successMsg.style.marginTop = "25px";
+                successMsg.style.backgroundColor = "#ed7272";
+                successMsg.textContent = "Please fill all fields";
+
+                setTimeout(() => {
+                    successMsg.style.marginTop = "-100px";
+                }, 3000);
+            };
+        };   
+    });
+
+});  //DOM
+
+
+

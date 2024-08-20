@@ -159,6 +159,8 @@
 .loginBtn{
     margin-top: 10%;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .loginBtn button{
@@ -215,3 +217,38 @@
 #email:focus, #password:focus, #confirmPassword:focus {
     outline: none;
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 32px;
+    aspect-ratio: 1;
+    display: grid;
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 110%;
+    transition: .5s ease-in-out;
+  }
+  .loader::before,
+  .loader::after {    
+    content:"";
+    grid-area: 1/1;
+    --c:no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+  }
+  .loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear
+  }
+  
+  @keyframes l12 { 
+    100%{transform: rotate(.5turn)}
+  }
+

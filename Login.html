@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Unreal</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/dfd3f79e6e.js" crossorigin="anonymous"></script>
+    <link href="fonts/css/all.css"   rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="CSS/login.css">
+   
+
+
+</head>
+<body>
+    <div class="container_login">
+        <div class="success_msg" id="success_msg">
+            <p>Sign up succesfull</p>
+        </div>
+        <div class="login_left">
+            <h1>Welcome to <br> <span>Unreal</span></h1>
+            <p>With you where ever you go <br> <br>|-- FAST • SECURE • AVAILABLE --|</p>
+            <hr>
+            <p> <span>Experience Unreal on any device</span></p>
+
+            <div class="mobileApp">
+                <div class="android">
+                    <i class="fa-brands fa-google-play"></i>
+                    <p>Get it on <br>Google Play</p>
+                </div>
+
+                <div class="ios">
+                    <i class="fa-brands fa-app-store-ios"></i> 
+                    <p>Get it on <br> Apple Store</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="login_right" id="login_right">
+
+            <div class="loginHead">
+                <h1 id="login_header">Login</h1>
+                <h1 id="signup_header">Signup</h1>
+            </div>
+            
+            
+            <div class="input" id="input_input">
+                <div class="username">
+                    <p>Email address <span>*</span></p>
+                    <input type="text" placeholder="eg. Johndoe@gmail.com" class="username" id="nameInput">
+                </div>
+                
+                <div class="password">
+                    <p>Password <span>*</span></p>
+                    <input type="password" placeholder="**********" class="password" id="passInput">
+                </div>
+    
+                <div class="password" id="confirmPass">
+                    <p>Confirm  Password <span>*</span></p>
+                    <input type="password" placeholder="**********" class="password" id="confirmPassInput">
+                </div>
+            </div>
+           
+
+            <div class="loginBtn">
+                <button id="login_btn">Login</button>
+            </div>
+
+            <div class="forgot" id="forgot">
+                <div class="forgot_pass" id="forgot_pass">
+                    <p>Forgot your password?</p>
+                    <a href="">Reset here</a>
+                </div>
+    
+                <hr>
+    
+                <div class="signup">
+                    <p id="has_account">Don't have an account?</p>
+                    <a href="" id="signup">Sign up</a>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+
+    <script type="module" src="Javascript/script.js" defer></script>
+    <script type="module" src="Javascript/Login.js" defer></script>
+<script type="module" src="Javascript/Firebase.js"></script>
+</body>
+
+
+</html>

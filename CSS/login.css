@@ -1,0 +1,213 @@
+/* ------------------------------------------------------------------Login page -------------------------------------------------------------*/
+.container_login{
+    display: flex;
+    height: 100vh;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.success_msg{
+    position: absolute;
+    margin-left: 40%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #32ff2f89;
+    margin-top: -100px;
+    transition: .4s ease-in-out;
+    user-select: none;
+}
+
+.login_left{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;
+    width: 50%;
+    height: 100vh;
+}
+
+.login_left h1{
+    font-weight: 280;
+    font-size: 50px;
+    padding-bottom: 20px
+}
+
+.login_left h1 span{
+    color: #04849a;
+}
+
+.login_left p{
+    padding-top: 60px;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.login_left p span{
+    padding-top: 70px;
+    color: #04849a;
+    padding-bottom: 0;
+
+}
+.mobileApp{
+    display: flex;
+    gap: 5%;
+}
+
+.android, .ios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    gap: 20px;
+    width: 30%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+
+.android p, .ios p{
+    font-size: 16px;
+    padding: 0;
+}
+
+.android i, .ios i{
+    font-size: 38px;
+}
+
+.login_right{
+    border: 1px solid rgba(17, 15, 15, 0.37);
+    margin-left: 7%;
+    width: 35%;
+    padding: 30px 50px;
+    height: 90vh;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #04849a;
+    transition: .8s ease-in-out;
+
+}
+
+.loginHead{
+    display: flex;
+    width: 45%;
+    margin-left: 30%;
+    gap: 10px;
+    padding: 12px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+#signup_header{
+    margin-left: 25%;
+}
+
+.login_right h1{
+    font-size: 50px;
+    font-weight: 280;
+    padding-bottom: 0%;
+    color: aliceblue;
+    text-align: center;
+    transition: 1s ease-in-out;
+    text-align: center;
+    margin-left: 12%;
+}
+
+.login_right p{
+    font-size: 17px;
+    margin-left: 0;
+    color: white;
+    padding-top: 10px;
+}
+
+.login_right span{
+    color: orangered;
+}
+
+.username, .password{
+    margin-top: 1%;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.input{
+    overflow: hidden;
+    height: 32vh;
+    transition: 1s ease-in-out;
+}
+
+#confirmPass{
+    margin-top: 5%;
+    transition: 1s ease-in-out;
+    padding-top: 15px;
+    
+}
+
+.username input, .password input{
+    height: 53px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: grey;
+    text-align: center;
+    font-size: 17px;
+}
+
+.loginBtn{
+    margin-top: 10%;
+    width: 100%;
+}
+
+.loginBtn button{
+    width: 100%;
+    border: none;
+    height: 53px;
+    border-radius: 5px;
+    background-color: #1f323f;
+    color: whitesmoke;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.loginBtn button:hover{
+    color: #1f323f;
+    background-color: whitesmoke;
+    transition: .3s ease-in-out;
+
+}
+
+.forgot{
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#forgot_pass{
+    transition: .4s ease-in-out;
+}
+
+.forgot_pass, .signup{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 18px;
+}
+
+.forgot_pass a, .signup a{
+    text-decoration: none;
+    color: red;
+}
+
+.forgot_pass p, .signup p{
+    padding-top: 0;
+    padding-right: 20px;
+}
+
+.login_right hr{
+    width: 100%;
+    margin-top: 5%;
+}

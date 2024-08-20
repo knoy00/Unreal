@@ -1,0 +1,737 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+.hidden{
+    display: none;
+}
+
+/*---------------------------------------------------------------------- header */
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+}
+
+.header_right{
+    display: flex;
+    align-items: center;
+    gap: 12%;
+    margin-left: 57%;
+    padding: 0px 10px 0 10px;
+    width: 100%;
+}
+
+.header-logo{
+    padding: 5px;
+    background-color: rgb(47, 47, 47);
+    border-radius: 0 10px 0 10px;
+}
+
+
+.header-logo h1{
+    font-weight: 290;
+    font-size: 37px;
+    color: white;
+
+}
+
+.header-logo h1 span{
+    color: #04849a;
+    
+}
+
+.login_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: rgb(85, 85, 85);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_btn:hover{
+    background-color: rgb(27, 27, 27);
+    transition: .3s ease-in-out;
+}
+
+.login_btn i{
+    padding-right: 10px;
+    color: white;
+}
+
+.login_btn a{
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+
+}
+
+.register_btn button{
+    padding: 5px 55px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #04849a;
+    font-size: 16px;
+    color: white;
+}
+
+.register_btn button:hover{
+    background-color: rgb(35, 72, 105);
+    transition: .3s ease-in-out;
+}
+
+.header_menu{
+    width: 50px;
+}
+
+.header_menu i{
+    font-size: 1.4rem;
+    padding: 30%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header_menu i:hover{
+    background-color: rgba(0, 0, 0, 0.134);
+}
+
+.menu{
+    display: none;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.53);
+    margin-left: 75%;
+    margin-top: 1%;
+    padding: 20px 0;
+    position: absolute;
+    transition: .5s ease-in-out;
+    
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+.menu a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------------------------------------- sectionOne */
+
+.container{
+    display: flex;
+    background-color: white;
+    height: 100vh;
+    color: black;
+
+}
+
+.container_left{
+    padding: 50px 50px;
+}
+
+.CL_heading h1{
+    font-size: 60px;
+    font-weight: 300;
+
+}
+
+.CL_heading span{
+    color: #04849a;
+}
+
+.CL_subHeading p{
+    font-size: 20px;
+}
+
+.CL_subHeading .two {
+    color: #04849a;
+}
+
+.CL_buttons{
+    display: flex;
+    margin-top: 10%;
+    gap: 2%;
+
+}
+
+.CL_buttons button{
+    padding: 8px 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.CL_buttons button:hover{
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+.container_right img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+/*------------------------------------------ page two------------------ */
+.pageTwoContainer {
+    background: linear-gradient(to left, rgb(0, 0, 0), #04849a);
+    color: white;
+    width: 100%;
+    height: 90vh;
+}
+
+
+.pageTwo{
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
+    padding-top: 60px;
+    height: 90vh;
+
+}
+
+.txt1, .txt2, .txt3{
+    width: 35%;
+    text-align: center;
+    padding: 30px;
+    margin-top: 0px; 
+    height: 70vh;
+
+}
+
+.txt1 i, .txt2 i, .txt3 i{
+    font-size: 70px;
+    padding-bottom: 20px;
+}
+
+.txt1 h2, .txt2 h2, .txt3 h2{
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.txt1 p, .txt2 p, .txt3 p{
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+
+.txt1 a, .txt2 a, .txt3 a{
+    font-size: 14px;
+    border: 1px solid white;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.txt1 a:hover, .txt2 a:hover, .txt3 a:hover{
+    background: linear-gradient(to left , rgba(10, 128, 149, 0.44), #04849a); 
+} 
+
+/* --------------------------------------------page three--------------------------- */
+
+.pageThreeContainer{
+    background-color: white;
+    height: 100vh;
+    width: 100%;   
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.pageThree{
+    display: flex;
+    margin-left: 10%;
+}
+
+.send_steps{
+    width: 40%;
+    padding: 40px;
+}
+
+.send_steps h1{
+    padding-bottom: 20px;
+    color: #04849a;
+}
+
+.send_steps ol li{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 19px;
+}
+
+.send_steps b{
+    font-weight: 600;
+}
+
+.steps_img{
+    width: 60%;
+   
+}
+
+.steps_img img{
+    object-fit: cover;
+    height: 77vh;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------Dashboard--------------------------------------*/
+.container_dashboard{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.107);
+}
+
+.header_dashboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+    height: 80px;
+    background-color:  #04849a;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+.header_dashboard h1{
+    font-weight: 290;
+    font-size: 37px;
+    color: #ffffff;
+}
+
+.header_dashboard button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+    color:#0d74b9;
+    cursor: pointer;
+}
+
+.header_dashboard button:hover{
+    background-color:rgb(4, 132, 154);
+    color: white;
+    transition: .3s;
+
+}
+
+.side-flex{
+    display: flex;
+
+}
+
+
+.sidePanel{
+    width: 20%;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 90vh;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.dashboard, .sendMoney, .depositMoney, .withdrawMoney, .checkBalance{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s ease-in-out;
+}
+
+.sendMoney i, .dashboard i, .depositMoney i, .withdrawMoney i, .checkBalance i{
+    font-size: 20px;
+    color: #04849a;
+}
+
+.sendMoney a, .dashboard a, .depositMoney a, .withdrawMoney a, .checkBalance a{
+    font-size: 17px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.sendMoney:hover, .dashboard:hover, .depositMoney:hover, .withdrawMoney:hover, .checkBalance:hover{
+    margin-left: 25px;
+    transition: .5s ease;
+    background-color: #6092b476;
+    border-radius: 15px 0 0 15px;
+}
+
+.no-hover{
+    background-color: #04849a;
+    color: red;
+}
+
+.highlight{
+    background-color: #04849a;
+    margin-left: 30px;
+    border-radius: 15px 0 0 15px;
+}
+
+.highlight a{
+    color: white;
+}
+.highlight i{
+    color: rgba(255, 255, 255, 0.958);
+}
+
+
+/*--------------------------------- Dashboard home--------------------------- */
+.home{
+    width: 80%;
+    height: 90vh;
+    position: relative;
+}
+
+.welcome-msg{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 10px;
+}
+
+.welcome-msg h1{
+    font-weight: 290;
+}
+
+.welcome-msg h1 span{
+    color: #04849a;
+}
+
+/* CArds */
+
+.card{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.card_left{
+    width: 70%;
+    background-color: #04849a;
+    border-radius: 5px 0 0  5px;
+}
+.card_left img{
+    width: 16%;
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-left: 11%;
+    
+}
+
+.card_left p{
+    
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 11%;
+
+}
+
+.card_left h2{
+    font-size: 20px;
+    margin-left: 11%;
+    color: white;
+
+}
+
+#expiry{
+    font-size: 12px;
+    line-height: .8rem;
+    margin-left: 30%;
+}
+
+#name{
+    font-size: 17px;
+    margin-top: 10px;
+    color: white;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.date p{
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+}
+
+.card_right{
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card_right img{
+    width: 100%;
+    transform: rotate(90deg);
+    object-fit: contain;
+    height: 100%;
+}
+
+.recent{
+    position: absolute;
+    margin-top: 22%;
+    margin-left: 30px;
+    width: 90%;
+    height: 50%;
+    background-color: white;
+    
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.recent h2{
+    font-weight: 300;
+    color: grey;
+    padding: 5px;
+    font-size: 22px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+.transactions{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trans-history{
+    display: flex;
+}
+
+.trans-history p{
+    padding: 10px 30px;
+}
+
+.trans-type{
+    width: 20%;
+  
+}
+
+.trans-number{
+    width: 20%;
+}
+
+.trans-name{
+    width: 25%;
+    color: #04849a;
+    
+}
+
+.trans-platform{
+    width: 22%;
+}
+
+.trans-amount{
+    width: 13%;
+    text-align: center;
+    
+}
+
+.send_tab{
+    width: 80%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.send_tab h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 280;
+    margin-top: 20px;
+}
+
+.receiver_swap{
+    display: flex;
+}
+
+.receiver-info{
+    display: flex;
+    flex-direction: column;
+    height: 63%;
+    gap: 20px;
+    padding: 15px;
+    width: 50%;
+    /* margin-left: -600px;  
+    z-index: -999;  */
+    background-color: rgba(0, 28, 45, 0.749);
+    transition: .4s ease-in-out;
+    z-index: -999px;
+    color: white;
+}
+
+.send_amount p, .send_name p, .send_platform p, .send_number p{
+    font-size: 22px;
+    color: rgb(171, 171, 171);
+}
+
+.send_amount input, .send_name input, .send_number input, .send_platform select{
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid #0dabb9;
+}
+
+.send_button{
+    width: 40%;
+    height: 40px;
+    background-color: #0dabb9;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    font-weight: 600;
+    text-align: center;
+}
+
+.send_button:hover{
+    background-color: #095180;
+    transform: translateY(-10px);
+}
+
+.confirm_trans{
+    width: 50%;
+    margin-right: -2100px;
+    padding: 20px 30px;
+    transition: .4s ease-in-out;
+
+}
+
+.recipient, .platform, .amount, .number{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipient h3, .platform h3, .amount h3, .number h3{
+    font-size: 18px;
+    font-weight: 400;
+    color: grey;
+}
+
+.recipient p, .platform p, .amount p, .number p{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 1, 63);
+}
+
+.confirm_button{
+    width: 40%;
+    margin-left: 0%;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(7, 13, 66);
+    border-radius: 10px;
+    color: white;
+    margin-top: 20%;
+    margin-left: 30%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.confirm_button:hover{
+    background-color: #000000;
+}
+
+.success_screen, .fail_screen{
+    width: 50%;
+    padding: 30px;
+    margin-left: 0px;
+    transition: .4s ease-in-out;
+}
+
+.success_screen i{
+    font-size: 120px;
+    text-align: center;
+    margin-left: 37%;
+    color: green;
+}
+
+.success_screen h2{
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+}
+
+.success_screen p, .fail_screen p{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #050739;
+}
+
+.fail_screen i{
+    font-size: 120px;
+    margin-left: 37%;
+    color: rgb(193, 19, 19);
+}
+
+
+.fail_screen h2{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(191, 14, 14);
+}
+
+#login_btn, #login_header, #signup, #has_account {
+    transition: all 0.4s ease-in-out;
+}

@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const confirmPasswordField = document.getElementById("confirmPassword");
     const successMsg = document.getElementById("success_msg");
     const loader = document.getElementById("loader");
+    const load = document.getElementById("load");
     
     function validatePasswords() {
         const password = passwordField.value;
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     confirmPasswordField.addEventListener("input", validatePasswords);
     passwordField.addEventListener("input", validatePasswords);
 
-    login_btn.addEventListener("click", (event) => {
+    login_btn.addEventListener("click", async (event) => {
         
         const email = document.getElementById("email").value;
         const password = passwordField.value;
@@ -94,15 +95,27 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isLoginPage) {
             if (email && password && confirmPassword) {
                 if (password === confirmPassword) {
-                        createUserWithEmailAndPassword(auth, email, password)
-                        .then((userCredential) => {
-                            successMsg.textContent = "Registration successful!";
-                            successMsg.style.backgroundColor = "#72ed72";
-                            successMsg.style.marginTop = "25px";
-                            passwordField.value = "";
-                            confirmPasswordField.value = "";
-                        })
-                        .catch((error) => {
+
+                    try{
+                        load.style.width = "40%";
+                        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                        load.style.width = "100%";
+
+                        setTimeout(() => {
+                            load.style.width = "0";
+                        }, 2000);
+
+                        successMsg.textContent = "Registration successful!";
+                        successMsg.style.backgroundColor = "#72ed72";
+                        successMsg.style.marginTop = "25px";
+                        setTimeout(() => {
+                            successMsg.style.marginTop = "-100px";
+                            
+                        }, 3000);
+                        passwordField.value = "";
+                        confirmPasswordField.value = "";
+                    }
+                        catch(error) {
                             successMsg.textContent = error.message;
                             successMsg.style.backgroundColor = "#ed7272";
                             successMsg.style.marginTop = "25px";
@@ -113,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             passwordField.value = "";
                             confirmPasswordField.value = "";
-                        });
+                        };
 
                 } else {
                     validatePasswords();
@@ -149,27 +162,29 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } else {
             if(email && password){
-                signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
+                try{
+                    load.style.width = "50%";
+                    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                    load.style.width = "100%";
+                    setTimeout(() => {
+                        load.style.width = "0";
+                    }, 2000);
                     successMsg.style.marginTop = "25px";
                     successMsg.textContent = "Login successful!";
                     successMsg.style.backgroundColor = "#32ff2f89"
-
                     setTimeout(() => {
                         successMsg.style.marginTop = "-100px";
                     }, 3000);
-                })
-                .catch((error) => {
+                }
+                catch (error) {
                     successMsg.textContent = "Invalid Credentials";
                     successMsg.style.backgroundColor = "#ed7272";
                     successMsg.style.marginTop = "25px";
-
                     setTimeout(() => {
                         successMsg.style.marginTop = "-100px";
                     }, 3000);
-
                     passwordField.value = "";
-                });
+                };
             }
             else{
                 loader.style.marginLeft = "90%";
@@ -178,7 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     successMsg.style.marginTop = "25px";
                     successMsg.style.backgroundColor = "#ed7272";
                     successMsg.textContent = "Please fill all fields";
-
                     setTimeout(() => {
                         successMsg.style.marginTop = "-100px";
                     }, 3000);
@@ -186,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 setTimeout(() => {
                     loader.style.marginLeft = "110%";
-
                 }, 2000);
                 
             };

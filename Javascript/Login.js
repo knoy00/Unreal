@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             if(email && password){
                 try{
-                    load.style.width = "50%";
+                    load.style.width = "80%";
                     const userCredential = await signInWithEmailAndPassword(auth, email, password);
                     load.style.width = "100%";
                     setTimeout(() => {
@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     successMsg.style.backgroundColor = "#ed7272";
                     successMsg.textContent = "Please fill all fields";
                     setTimeout(() => {
+                        successMsg.style.marginTop = "60px";
                         successMsg.style.marginTop = "-100px";
                     }, 3000);
                 }, 2000);

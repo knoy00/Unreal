@@ -259,7 +259,7 @@
 
 .pageThreeContainer{
     background-color: white;
-    height: 100vh;
+    height: 85vh;
     width: 100%;   
     padding: 15px;
     margin-top: 50px;
@@ -301,6 +301,183 @@
     border-radius: 15px;
 }
 
+
+/*------------------------------------------ Page four -------------------------------------*/
+.pageFourContainer{
+    width: 100%;
+    height: 100vh;
+    color: black;
+    overflow: hidden;
+    background-color:#0d1117;
+    transition: 1s ease-in-out;
+    position: relative;
+}
+
+.pageFour_header{
+    width: 100%;
+}
+
+.pageFour_header h1{
+    color: white;
+    margin-top: 3%;
+    transition: color 0.5s ease;
+    margin-left: -1050px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.pageFour_header h1 span{
+    color: #04849a;
+}
+
+.pageFour_content{
+    width: 100%;
+    display: flex;
+}
+
+.pageFour_left{
+    width: 50%;
+    border: 1px solid green;
+    margin-left: -1300px;
+}
+
+.pageFour_left img{
+    margin-left: -1300px;
+    object-fit: contain;
+    width: 81%;
+}
+
+.pageFour_right{
+    border: 1px solid red;
+    position: absolute;
+    margin-left: 105%;
+    color: white;
+    width: 50%;
+    margin-top: 5%;
+
+}
+
+.pageFour_right ol li{
+    font-size: 20px;
+    padding: 15px;
+}
+
+.pageFour_right ol li span{
+    color: #04849a;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+
+/* ----------------------------Page Five ---------------------------------*/
+.pageFiveContainer{
+    width: 100%;
+    height: 125vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.pageFive_left{
+    background-color: #04849a;
+    width: 60%;
+    color: white;
+    height: 55%;
+    position: absolute;
+    margin-left: -300px;
+}
+
+.pageFive_content{
+    padding: 80px;
+    height: 100%;
+    width: 100%;
+}
+
+.pageFive_content h1{
+    padding-bottom: 30px;
+    font-size: 50px;
+    font-weight: 500; 
+}
+
+.pageFive_content p{
+    font-size: 21px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+.pageFive_content button{
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    background-color: #04849a;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.pageFive_right{
+    width: 60%;
+    height: 60vh;
+    border: 5px solid #04849a;
+    position: absolute;
+    z-index: -1;
+    margin-top: 22%;
+    overflow: hidden;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.pageFive_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pageFive_right img{
+    width: 150%;
+    margin-left: 0%;
+}
+
+.pageFive_content_right{
+    margin-top: 15%;
+    width: 100%;
+    padding: 30px;
+}
+
+.pageFive_content_right h1{
+    color: #04849a;
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.pageFive_content_right p{
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid #04849a;
+    border-radius: 5px;
+    color: #04849a;
+}
+
+
+/* ---------------------------------------Page six ----------------------------------*/
+.footer{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_content{
+    width: 90%;
+    background-color: #0d1117;
+    height: 100%;
+}
 
 
 

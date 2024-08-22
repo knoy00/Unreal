@@ -54,13 +54,14 @@
     justify-content: center;
     align-items: center;
     padding: 5px 15px;
-    background-color: rgb(85, 85, 85);
+    background-color: #0d1117;
     border-radius: 5px;
     cursor: pointer;
+    color: #ffffff;
 }
 
 .login_btn:hover{
-    background-color: rgb(27, 27, 27);
+    background-color: #2b2b2b;
     transition: .3s ease-in-out;
 }
 
@@ -388,6 +389,7 @@
     height: 55%;
     position: absolute;
     margin-left: -300px;
+    z-index: -1;
 }
 
 .pageFive_content{
@@ -424,7 +426,7 @@
     height: 60vh;
     border: 5px solid #04849a;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     margin-top: 22%;
     overflow: hidden;
     margin-left: 20%;
@@ -447,6 +449,8 @@
     margin-top: 15%;
     width: 100%;
     padding: 30px;
+    transition: .4s ease-in-out;
+    cursor: pointer;
 }
 
 .pageFive_content_right h1{
@@ -462,13 +466,15 @@
     border: 2px solid #04849a;
     border-radius: 5px;
     color: #04849a;
+    
 }
+
 
 
 /* ---------------------------------------Page six ----------------------------------*/
 .footer{
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
 }
@@ -477,9 +483,92 @@
     width: 90%;
     background-color: #0d1117;
     height: 100%;
+    padding: 20px;
+
 }
 
+.footer_logo{
+    width: 15%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 
+.footer_logo h1{
+    font-weight: 400;
+}
+
+.footer_logo h1 span{
+    color: #04849a;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    color: #04849a;
+    width: 18%;
+    padding: 10px 30px;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.socials i{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.footer_content hr{
+    width: 100%;
+    height: 3px;
+    background-color: #04849a;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.footer_links{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    padding: 20px 35px;
+    gap: 7%;
+}
+
+.company, .product, .support{
+    display: flex;
+    flex-direction: column;
+}
+
+.company h2, .support h2, .product h2{
+    font-size: 35px;
+    font-weight: 300;
+    color: #04849a;
+    padding-bottom: 15px;
+}
+
+.company a, .support a, .product a{
+    font-size: 17px;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+#footer_msg{
+    color: white;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+}
+.footer_last{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#footer_last{
+    color: white;
+}
 
 
 

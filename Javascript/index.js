@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const ct_two = document.getElementById("ct_two");
         const ct_three = document.getElementById("ct_three");
         const ct_four = document.getElementById("ct_four");
+        const header = document.getElementById("header");
 
 
         let value = window.scrollY;
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ct_two.style.marginLeft = "-" + value * 0.5 + "px";
         ct_three.style.marginLeft = "-" + value * 0.45 + "px";
         ct_four.style.marginLeft = "-" + value * 0.4 + "px";
+       
     });
 
 });

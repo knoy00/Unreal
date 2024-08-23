@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Unreal</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/dashBoard.css">
     <link href="fonts/css/all.css"   rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container_dashboard">
+    <div class="container_dashboard" id="dash_">
         <div class="header_dashboard">
             <h1>Unreal</h1>
-            <button>Log out</button>
+            <div class="header_right">
+                <i class="fa-solid fa-sun" id="dark_mode"></i>
+                <button>Log out</button>
+            </div>
+            
         </div>
 
         <div class="side-flex">
-            <div class="sidePanel">
+            <div class="sidePanel" id="sidePanel">
 
                 <div class="dashboard  highlight">
                     <i class="fa-solid fa-home"></i>
-                    <a href="">Home</a>
+                    <a href="" id="home">Home</a>
     
                 </div>
                 <div class="sendMoney" id="sendMoney">
                     <i class="fa-solid fa-paper-plane"></i>
-                    <a href="">Send Money</a>
+                    <a href=""  class="sideColor">Send Money</a>
                 </div>
                <div class="depositMoney" id="depositMoney">
                     <i class="fa-solid fa-arrow-down"></i>
-                    <a href="">Deposit Money</a>
+                    <a href="" class="sideColor">Deposit Money</a>
                </div>
                <div class="withdrawMoney" id="withdrawMoney">
                 <i class="fa-solid fa-arrow-up"></i>
-                <a href="">Withdraw Money</a>
+                <a href="" class="sideColor">Withdraw Money</a>
                </div>
                <div class="checkBalance" id="checkBalance">
                 <i class="fa-solid fa-money-bill"></i>
-                <a href="">Check Balance</a>
+                <a href="" class="sideColor">Check Balance</a>
                </div>
     
             </div>
@@ -64,7 +69,11 @@
                     </div>
                 </div>
 
-                <div class="recent">
+                <div class="card_img">
+                    <img src="Images/card.png" alt="">
+                </div>
+
+                <div class="recent" id="recent">
                     <h2>Recent Transasctions</h2>
                     <div class="transactions">
 
@@ -125,7 +134,7 @@
                         </div>
         
                         <div class="send_name">
-                            <p>Enter recepient name</p>
+                            <p>Enter recipient name</p>
                             <input type="text" placeholder="Recipient name">
                         </div>
     
@@ -210,6 +219,7 @@
     </script>
 
     <script type="module" src="Javascript/script.js" defer></script>
+    <script type="module" src="Javascript/dashBoard.js" defer></script>
     <script type="module" src="Javascript/Firebase.js"></script>
   
 </body>

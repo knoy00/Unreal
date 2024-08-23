@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ct_two.style.marginLeft = "-" + value * 0.5 + "px";
         ct_three.style.marginLeft = "-" + value * 0.45 + "px";
         ct_four.style.marginLeft = "-" + value * 0.4 + "px";
-       
+    
     });
 
 });

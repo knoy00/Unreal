@@ -19,6 +19,7 @@
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .header_right{
@@ -338,7 +339,6 @@
 
 .pageFour_left{
     width: 50%;
-    border: 1px solid green;
     margin-left: -1300px;
 }
 
@@ -355,6 +355,7 @@
     color: white;
     width: 50%;
     margin-top: 5%;
+    z-index: 0;
 
 }
 
@@ -402,6 +403,7 @@
     padding-bottom: 30px;
     font-size: 50px;
     font-weight: 500; 
+    color: #1d2531cc;
 }
 
 .pageFive_content p{

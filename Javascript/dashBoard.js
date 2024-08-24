@@ -10,31 +10,38 @@ const sendHeader = document.getElementById("sendTab_header");
 let isDarkMode = false;  
 let isRotated = false;
 
+function applyDarkMode() {
+    mode.style.color = "#ffffff";
+    recent.style.backgroundColor = "#0d1117";
+    sidePanel.style.backgroundColor = "#0d1117";
+    sidePanel.style.color = "#ffffff";
+    recent.style.color = "#ffffff";
+    dash.style.backgroundColor = "#000000";
+    home.style.color = "#efefef";
+    sendHeader.style.color = "#efefef";
+    sidecolor.forEach((element) => {
+        element.style.color = "#efefef";
+    });
+}
+
+function applyLightMode() {
+    mode.style.color = "#000000";
+    recent.style.backgroundColor = "#efefef";
+    sidePanel.style.backgroundColor = "#efefef";
+    sidePanel.style.color = "#000000";
+    recent.style.color = "#000000";
+    dash.style.backgroundColor = "#ffffff";
+    sendHeader.style.color = "#000000";
+    sidecolor.forEach((element) => {
+        element.style.color = "#0d1117";
+    });
+}
+
 mode.addEventListener("click", () => {
     if (!isDarkMode) {
-        mode.style.color = "#ffffff";
-        recent.style.backgroundColor = "#0d1117";
-        sidePanel.style.backgroundColor = "#0d1117";
-        sidePanel.style.color = "#ffffff";
-        recent.style.color = "#ffffff";
-        dash.style.backgroundColor = "#000000";
-        home.style.color = "#efefef";
-        sendHeader.style.color = "#efefef";
-        sidecolor.forEach((element) => {
-            element.style.color = "#efefef";
-        })
+        applyDarkMode();
     } else {
-        mode.style.color = "#000000";
-        recent.style.backgroundColor = "#efefef";
-        sidePanel.style.backgroundColor = "#efefef";
-        sidePanel.style.color = "#000000";
-        recent.style.color = "#000000";
-        dash.style.backgroundColor = "#ffffff";
-        sendHeader.style.color = "#000000";
-
-        sidecolor.forEach((element) => {
-            element.style.color = "#0d1117";
-        })
+       applyLightMode();
     }
 
     if (!isRotated) {
@@ -53,12 +60,7 @@ mode.addEventListener("click", () => {
 const allDivs = document.querySelectorAll(".dashboard, .sendMoney, .depositMoney, .withdrawMoney, .checkBalance");
 function hideHighlight(isDarkMode){
     allDivs.forEach(div => div.classList.remove("highlight"));
-    if(!isDarkMode){
-        home.style.color = "black";
-    }
-    else{
-        home.style.color = "#efefef";
-    }
+    home.style.color = isDarkMode ? "#efefef" : "black";
 
     isDarkMode = !isDarkMode;
 }
@@ -80,30 +82,35 @@ const success_screen = document.getElementById("success_screen");
 const send_button = document.getElementById("confirm_button");
 const fail_screen = document.getElementById("fail_screen");
 
-sendMoney.addEventListener("click", (event) => {
-    event.preventDefault();
+
+
+function showSendTab() {
     home.classList.add("hidden");
     sendTab.classList.remove("hidden");
-});
+}
 
-confirm_button.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    receiver_info.style.marginLeft = "-620px";
-    receiver_info.style.zIndex = "-999";
+function confirmTransaction() {
+    receiver_info.classList.add("off-screen", "transition");
     confirm_trans.classList.remove("hidden");
+}
 
-});
+function completeTransaction() {
+    success_screen.classList.remove("hidden");
+    success_screen.classList.add("transition");
+    success_screen.style.marginLeft = "50%";
+    confirm_trans.style.marginLeft = "1198px";
 
-send_button.addEventListener("click", (event) => {
+    setTimeout(() => {
+        success_screen.classList.add("hidden");
+        success_screen.style.marginLeft = "-50%";
+        receiver_info.classList.remove("off-screen");
+        confirm_trans.classList.add("hidden");
+    }, 5000);
+}
 
-    event.preventDefault();
-
-    success_screen.classList.remove("hidden")
-    success_screen.style.marginLeft = "50%"
-    success_screen.style.zIndex = "100";
-    confirm_trans.style.marginLeft = "1198px"
-})
+sendMoney.addEventListener("click", showSendTab);
+confirm_button.addEventListener("click", confirmTransaction);
+send_button.addEventListener("click", completeTransaction);
 
 
 

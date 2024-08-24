@@ -470,3 +470,17 @@
 #login_btn, #login_header, #signup, #has_account {
     transition: all 0.4s ease-in-out;
 }
+
+.transition {
+    transition: all 1s ease;
+}
+
+.off-screen {
+    margin-left: -620px;
+    z-index: -999;
+}
+
+.on-screen {
+    margin-left: 0px;
+    z-index: 999;
+}

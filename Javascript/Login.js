@@ -174,14 +174,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     successMsg.style.backgroundColor = "#32ff2f89"
                     setTimeout(() => {
                         successMsg.style.marginTop = "-100px";
+                        window.location.href = 'Dashboard.html';
                     }, 3000);
                 }
                 catch (error) {
                     successMsg.textContent = "Invalid Credentials";
                     successMsg.style.backgroundColor = "#ed7272";
                     successMsg.style.marginTop = "25px";
+                    load.style.width = "100%";
                     setTimeout(() => {
                         successMsg.style.marginTop = "-100px";
+                        load.style.width = "0%";
                     }, 3000);
                     passwordField.value = "";
                 };

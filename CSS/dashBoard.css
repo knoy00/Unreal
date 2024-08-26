@@ -27,7 +27,7 @@
     height: 80px;
     background-color:  #04849a;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
+    border-bottom: 1px solid rgb(85, 85, 85);
 }
 
 .header_dashboard h1{
@@ -85,6 +85,7 @@
     overflow: hidden;
     background-color: #efefef;
     transition: .6s ease-in-out;
+    border-right: 1px solid rgb(67, 67, 67);
 }
 
 .dashboard, .sendMoney, .depositMoney, .withdrawMoney, .checkBalance{
@@ -318,6 +319,7 @@
     height: 90vh;
     position: relative;
     overflow: hidden;
+    display: none;
 }
 
 
@@ -483,4 +485,157 @@
 .on-screen {
     margin-left: 0px;
     z-index: 999;
+}
+
+
+/* ------------------------------My Account ----------------------------------*/
+.account{
+    width: 100%;
+    height: 90vh;
+}
+
+.account h1{
+    text-align: center;
+    line-height: 5rem;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.account_flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.account_menu{
+    width: 80%;
+    height: 100%;
+    padding: 20px 20px;
+    background-color: #efefef;
+}
+
+.account_profile{
+    height: 17%;
+    width: 100%;
+    padding-bottom: 0px;
+
+}
+
+.account_profile p{
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 10px;
+    color: #2090a3;
+    text-align: center;
+    padding-top: 10px;    
+}
+
+.profileBtn_flex{
+    display: flex;
+    padding: 15px 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid violet;
+    width: 80%;
+    background-color: rgb(33, 36, 50);
+    border-radius: 5px;
+    border: none;
+    margin: auto;
+    transition: .4s ease-in-out;
+
+}
+
+.profileBtn_flex i{
+    font-size: 19px;
+    color: white;
+    padding: 0 15px;
+    
+}
+
+.profileBtn_flex p{
+   padding: 0;
+   color: white;
+   font-weight: 300;
+   font-size: 18px; 
+}
+
+.profileBtn_flex:hover{
+    background-color: #808080;
+}
+
+
+
+
+.account_right{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.account_right h1{
+    font: 500;
+    font-size: 28px;
+}
+
+.account_info{
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.email, .password{
+    display: flex;
+    padding: 5px 15px;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    width: 100%;
+
+}
+
+.email_info, .password_info{
+    display: flex; 
+    align-items: center;
+    gap: 30px;
+}
+
+.email_info h2, .password_info h2{
+    font-weight: 300;
+    font-size: 21px;
+    color: #183153;
+    width: 150px;
+}
+
+.email_info p, .password_info p{
+    color: rgb(0, 113, 128);
+    width: 200px;
+    text-align: center;
+}
+
+.update_email, .update_password{
+}
+
+.update_email button, .update_password button{
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #183153;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+.update_email button:hover, .update_password button:hover{
+    border: 1px solid #04849a;
+    color: #04849a;
+}
+
+.personal_info{
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
 }

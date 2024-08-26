@@ -19,7 +19,7 @@
             
         </div>
 
-        <div class="side-flex">
+        <div class="side-flex" >
             <div class="sidePanel" id="sidePanel">
 
                 <div class="dashboard  highlight">
@@ -43,10 +43,14 @@
                 <i class="fa-solid fa-money-bill"></i>
                 <a href="" class="sideColor">Check Balance</a>
                </div>
+               <div class="checkBalance" id="checkBalance">
+                <i class="fa-solid fa-user"></i>
+                <a href="" class="sideColor">My Account</a>
+               </div>
     
             </div>
     
-            <div class="home " id="home">
+            <div class="home hidden" id="home">
                 <div class="welcome-msg">
                     <h1>Hello, <span id="dash_username"></span></h1>
                 </div>
@@ -124,6 +128,7 @@
                 </div>
             </div>
 
+                <!------------------ send Tab --------------------------->
             <div class="send_tab hidden" id="send_tab">
                 <h1 id="sendTab_header">Send Money</h1>
                 <div class="receiver_swap  ">
@@ -205,6 +210,117 @@
 
                 </div>
 
+                </div>
+            </div>
+
+            <!---------------------- My account ---------------------->
+            <div class="account">
+                <h1>My Account</h1>
+                <div class="account_flex">
+                    <div class="account_menu">
+                        <div class="account_profile">
+                            <p>Profile</p>
+                            <div class="profileBtn_flex">
+                                <i class="fa-solid fa-user"></i>
+                                <p>Profile</p>
+                            </div>
+                        </div>
+                        <div class="account_profile">
+                            <p>Account Settings</p>
+                            <div class="profileBtn_flex">
+                                <i class="fa-solid fa-user"></i>
+                                <p>Settings</p>
+                            </div>
+                        </div>
+                        <div class="account_profile">
+                            <p>Notifications</p>
+                            <div class="profileBtn_flex">
+                                <i class="fa-solid fa-bell"></i>
+                                <p>Notifications</p>
+                            </div>
+                        </div>
+                        <div class="account_profile">
+                            <p>Support</p>
+                            <div class="profileBtn_flex">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>Support</p>
+                            </div>
+                        </div>
+                        <div class="account_profile">
+                            <p>Logout</p>
+                            <div class="profileBtn_flex">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Logout</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="account_right">
+                        <h1>PROFILE</h1>
+                        <hr>
+
+                        <div class="account_info">
+                            <div class="email">
+                                <div class="email_info">
+                                    <h2>Email Address</h2>
+                                    <p>Kelvin.oy16@gmail.com</p>
+                                </div>
+
+                                <div class="update_email">
+                                    <button>Update Email</button>
+                                </div>
+                            </div>
+                            
+                            <div class="password">
+                                <div class="password_info">
+                                    <h2>Password</h2>
+                                    <p>••••••••••</p>
+                                </div>
+                                <div class="update_password">
+                                    <button>Update Password</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+
+                      <!-- ------------personal info ----------->
+                        <div class="personal_info">
+                            <div class="password">
+                                <div class="password_info">
+                                    <h2>First name</h2>
+                                    <p>Kelvin</p>
+                                </div>
+                                <div class="update_password">
+                                    <button>Update Personal Info</button>
+                                </div>
+                            </div>
+                            <div class="password">
+                                <div class="password_info">
+                                    <h2>Last name</h2>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                            <div class="password">
+                                <div class="password_info">
+                                    <h2>Date of Birth</h2>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                            <div class="password">
+                                <div class="password_info">
+                                    <h2>Address</h2>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                            <div class="password">
+                                <div class="password_info">
+                                    <h2>Telephone</h2>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

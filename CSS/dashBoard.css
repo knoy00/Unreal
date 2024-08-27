@@ -85,7 +85,7 @@
     overflow: hidden;
     background-color: #efefef;
     transition: .6s ease-in-out;
-    border-right: 1px solid rgb(67, 67, 67);
+    border-right: 1px solid rgba(172, 172, 172, 0.763);
 }
 
 .dashboard, .sendMoney, .depositMoney, .withdrawMoney, .checkBalance{
@@ -487,6 +487,9 @@
     z-index: 999;
 }
 
+.visibility{
+    display: none;
+}
 
 /* ------------------------------My Account ----------------------------------*/
 .account{
@@ -568,12 +571,13 @@
     background-color: #808080;
 }
 
+/*---------------------------------------------------- profile */
 
 .account_right{
     width: 100%;
     height: 100%;
     background-color: #efefef;
-   
+    /*----------------display------------------*/
 }
 
 .account_right h1{
@@ -648,7 +652,6 @@
     width: 100%;
     height: 100%;
     background-color: #efefef;
-    display: none;
 }
 
 .dark, .auto_logout{
@@ -695,4 +698,67 @@
     margin-left: 0%;
     background-color: #171633;
     border-radius: 50%;
+}
+
+/*------------------------------ notifications */
+.notif, .logout{
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+}
+
+
+/*-------------------------------------------- support */
+.support{
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+}
+
+.support_mail, .support_mobile, .support_socials{
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #04849a;
+}
+
+.support_mobile{
+    height: 150px;
+    border: 3px solid #04849a;
+    margin-top: 2%;
+}
+
+.support_socials{
+    border: 3px solid #04849a;
+    margin-top: 2%;
+    height: 120px;
+}
+
+.support_mail h2, .support_mobile h2, .support_socials h2{
+    font-size: 20px;
+    height: 30px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.support_mail a, .support_mobile a{
+    color: orangered;
+}
+
+.ss_icons{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.ss_icons i{
+    border: 1px solid #050739;
+    padding: 10px;
+    border-radius: 5px;
+    color: #050739;
+    cursor: pointer;
 }

@@ -73,6 +73,21 @@ allDivs.forEach(div => {
     });
 });
 
+const visible = 'visibility';
+const myAccountDivs = document.querySelectorAll(".account_right, .Settings, .notif, .support");
+function toggleVisibility(){
+    myAccountDivs.forEach(accountDivs => {
+        accountDivs.classList.add(visible)
+    })
+}
+
+toggleVisibility();
+myAccountDivs.forEach( accountDivs => {
+    accountDivs.addEventListener("click", () => {
+        accountDivs.classList.toggle(visible);
+    });
+});
+
 const hidden = document.getElementsByClassName("hidden");
 const sendTab = document.getElementById("send_tab");
 const confirm_button = document.getElementById("send_button");

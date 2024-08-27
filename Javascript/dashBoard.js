@@ -73,20 +73,39 @@ allDivs.forEach(div => {
     });
 });
 
+
 const visible = 'visibility';
 const myAccountDivs = document.querySelectorAll(".account_right, .Settings, .notif, .support");
-function toggleVisibility(){
-    myAccountDivs.forEach(accountDivs => {
-        accountDivs.classList.add(visible)
-    })
+const myAccountBtn = document.querySelectorAll("#pbf, #account_setting, #notif, #support");
+
+const idToClassMap = {
+    pbf: '.account_right',
+    account_setting: '.Settings',
+    notif: '.notif',
+    support: '.support'
+};
+
+function hideAllDivs() {
+    myAccountDivs.forEach(accountDiv => {
+        accountDiv.classList.add(visible);
+    });
 }
 
-toggleVisibility();
-myAccountDivs.forEach( accountDivs => {
-    accountDivs.addEventListener("click", () => {
-        accountDivs.classList.toggle(visible);
+hideAllDivs();
+
+myAccountBtn.forEach(button => {
+    button.addEventListener("click", () => {
+        hideAllDivs();
+        
+        const targetClass = idToClassMap[button.id];
+        const targetDiv = document.querySelector(targetClass);
+        
+        if (targetDiv) {
+            targetDiv.classList.remove(visible);
+        }
     });
 });
+
 
 const hidden = document.getElementsByClassName("hidden");
 const sendTab = document.getElementById("send_tab");

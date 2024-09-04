@@ -10,6 +10,9 @@ const account_section = document.getElementById("account_section");
 const account_flex = document.getElementById("account_flex");
 const account_menu = document.getElementById("account_menu");
 const account_right = document.getElementById("account_right");
+const settings = document.getElementById("settings");
+const notifications = document.getElementById("notifications");
+const spprt = document.getElementById("support_sec");
 
 let isDarkMode = false;  
 let isRotated = false;
@@ -23,10 +26,15 @@ function applyDarkMode() {
     dash.style.backgroundColor = "#000000";
     home.style.color = "#efefef";
     sendHeader.style.color = "#efefef";
-    account_section.style.backgroundColor = "#000000";
-    account_flex.style.backgroundColor = "#000000";
+    account_section.style.backgroundColor = "#010409";
+    account_flex.style.backgroundColor = "#010409";
     account_menu.style.backgroundColor = "#0d1117";
     account_right.style.backgroundColor = "#0d1117";
+    settings.style.backgroundColor = "#0d1117";
+    settings.style.color = "#ffffff";
+    notifications.style.backgroundColor = "#0d1117";
+    notifications.style.color = "#ffffff";
+    spprt.style.backgroundColor = "#0d1117";
     sidecolor.forEach((element) => {
         element.style.color = "#efefef";
     });

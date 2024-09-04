@@ -84,11 +84,10 @@
     width: 35%;
     padding: 30px 50px;
     height: 90vh;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 10px;
     background-color: #04849a;
     transition: .8s ease-in-out;
-
 }
 
 .loginHead{
